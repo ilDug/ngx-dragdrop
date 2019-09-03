@@ -1,0 +1,42 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "ngx-dragdrop": {
+      "projectType": "library",
+      "root": "projects/ngx-dragdrop",
+      "sourceRoot": "projects/ngx-dragdrop/src",
+      "prefix": "dag",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-dragdrop/tsconfig.lib.json",
+            "project": "projects/ngx-dragdrop/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-dragdrop/src/test.ts",
+            "tsConfig": "projects/ngx-dragdrop/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-dragdrop/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-dragdrop/tsconfig.lib.json",
+              "projects/ngx-dragdrop/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "defaultProject": "ngx-dragdrop"
+}
