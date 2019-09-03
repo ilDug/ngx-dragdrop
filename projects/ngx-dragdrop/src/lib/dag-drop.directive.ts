@@ -38,7 +38,7 @@ export class DagDropDirective implements OnInit {
 
         const dataTransfer: DataTransfer = e.dataTransfer;
         const data = dataTransfer.getData("text/plain");
-        this.dagDrop.emit(data)
+        this.dagDrop.emit(JSON.parse(data))
     }
 
 

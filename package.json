@@ -1,6 +1,9 @@
 {
-  "name": "ngx-dragdrop",
+  "name": "@ildug/ngx-dragdrop",
   "version": "0.0.0",
+  "author": "ilDug",
+  "description": "Angular directives for Drag & Drop",
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,7 +12,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~8.2.3",
     "@angular/common": "~8.2.3",

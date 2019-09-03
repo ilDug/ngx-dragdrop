@@ -21,7 +21,7 @@ export class DagDragDirective implements OnInit {
                 };
 
     /** data transfered during drag-drop */
-    @Input() dragData: string;
+    @Input() dagDrag: any;
 
     /** image src visualised during dragging */
     @Input() dragImage: string;
@@ -42,9 +42,11 @@ export class DagDragDirective implements OnInit {
 
 
     public onDragStart(e) {
+        
         /** set data-transfer */
+        const payload = JSON.stringify(this.dagDrag) 
         const data: DataTransfer = e.dataTransfer;
-        data.setData("text/plain", this.dragData);
+        data.setData("text/plain", payload);
         data.dropEffect = "move";
 
         /** element */
