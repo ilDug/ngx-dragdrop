@@ -3,32 +3,32 @@ import { Directive, HostListener, Output, Input, EventEmitter, ElementRef, Rende
 @Directive({
     selector: '[dagDrag]'
 })
-export class DagDragDirective implements OnInit {
-    
+export class DagDragDirective<T> implements OnInit {
+
     /** events listeners */
     @HostListener('drag', ['$event']) onDragListener = this.onDrag
     @HostListener('dragstart', ['$event']) onDragStartListener = this.onDragStart
     @HostListener('dragend', ['$event']) onDragEndListener = this.onDragEnd
-    
-    
+
+
     /** whether element is dragging - TWO-WAY BINDING */
     private _dragging: boolean;
-    @Output()   draggingChange = new EventEmitter<any>();
-    @Input()    get dragging(): any { return this._dragging; }
-                set dragging(d: any) {
+    @Output()   draggingChange = new EventEmitter<boolean>();
+    @Input()    get dragging(): boolean { return this._dragging; }
+                set dragging(d: boolean) {
                     this._dragging = d;
                     this.draggingChange.emit(this._dragging);
                 };
 
     /** data transfered during drag-drop */
-    @Input() dagDrag: any;
+    @Input() dagDrag: T;
 
     /** image src visualised during dragging */
     @Input() dragImage: string;
 
 
     constructor(
-        private el: ElementRef, 
+        private el: ElementRef,
         private r: Renderer2
     ) { }
 
@@ -42,9 +42,9 @@ export class DagDragDirective implements OnInit {
 
 
     public onDragStart(e) {
-        
+
         /** set data-transfer */
-        const payload = JSON.stringify(this.dagDrag) 
+        const payload = JSON.stringify(this.dagDrag)
         const data: DataTransfer = e.dataTransfer;
         data.setData("text/plain", payload);
         data.dropEffect = "move";

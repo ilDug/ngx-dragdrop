@@ -3,7 +3,7 @@ import { Directive, Output, EventEmitter, Input, HostListener, Renderer2, OnInit
 @Directive({
     selector: "[dagDrop]"
 })
-export class DagDropDirective implements OnInit {
+export class DagDropDirective<T> implements OnInit {
 
     /** event listeners */
     @HostListener("drop", ["$event"]) onDropListener = this.onDrop;
@@ -14,10 +14,10 @@ export class DagDropDirective implements OnInit {
     @HostBinding("class.drag-over") dragOverClass: boolean = false;
 
     /**  emits the transfered data */
-    @Output() dagDrop: EventEmitter<string> = new EventEmitter();
+    @Output() dagDrop: EventEmitter<T> = new EventEmitter();
 
     constructor(
-        private el: ElementRef, 
+        private el: ElementRef,
         private r: Renderer2
     ) { }
 
