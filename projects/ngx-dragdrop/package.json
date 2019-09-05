@@ -1,8 +1,8 @@
 {
     "name": "@ildug/ngx-dragdrop",
-    "version": "0.0.1",
+    "version": "0.0.1-beta.1",
     "author": "ilDug",
-    "description": "Angular directives for Drag & Drop",
+    "description": "Angular directives for passing data with Drag & Drop",
     "license": "MIT",
     "peerDependencies": {
         "@angular/common": "^8.2.4",
