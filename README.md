@@ -1,5 +1,5 @@
 # ngx-dragdrop
-Angular directives for Drag &amp; Drop
+Angular directives for passing data with Drag & Drop
 
 APLHA VERSION (sorry...)
 
