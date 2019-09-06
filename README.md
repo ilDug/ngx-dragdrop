@@ -1,6 +1,11 @@
 # ngx-dragdrop
-Angular directives for passing data with Drag & Drop
+Angular directives for passing data with Drag & Drop.
 
-APLHA VERSION (sorry...)
+## Demo
+See [demo](http://ngx-dragdrop.dagtech.it)
 
-coming soon...
+BETA VERSION (sorry...)
+
+## documentation
+
+documentation coming soon...

@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
+.container{
+    font-family: 'Comfortaa', cursive;
+   top:0;
+   left:0;
+   right:0;
+   bottom:0;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(234,234,234);
+
+    #github{
+        margin: 0 auto;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        img{
+            height: 30px;
+        }
+    }
+    .titles{
+        text-align: center;
+        padding: 2rem;
+        color: rgb(100, 100, 100);
+        
+        margin: 0 auto;
+        position: relative;
+
+        h1{
+            font-size: 3rem;
+            color:rgb(120, 141, 153);
+        }
+
+        pre{
+            padding:1rem;
+            background-color:rgb(224, 208, 208);
+            overflow: hidden;
+            margin: 0 auto;
+            max-width: 380px;
+        }
+    }
+}

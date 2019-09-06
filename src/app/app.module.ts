@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { NgxDragdropModule } from 'projects/ngx-dragdrop/src/public-api';
+import { NgxDragdropModule } from 'ngx-dragdrop';
 
 @NgModule({
   declarations: [
