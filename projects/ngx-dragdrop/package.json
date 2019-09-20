@@ -1,6 +1,6 @@
 {
     "name": "@ildug/ngx-dragdrop",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": "ilDug",
     "description": "Angular directives for passing data with Drag & Drop",
     "license": "MIT",

@@ -1,10 +1,4 @@
-<div id="github">
-    <a href="https://github.com/ilDug/ngx-dragdrop">
-        <span>
-            <img src="assets/github.svg" alt="" title="fork me on github">
-        </span>
-    </a>
-</div>
+
 <div class="container">
 
     <div class="titles">
@@ -21,7 +15,30 @@
 
     </div>
 
-    <div class="example">
+<div id="github">
+    <a href="https://github.com/ilDug/ngx-dragdrop">
+        <span>
+            <img src="assets/github.svg" alt="fork me on github" title="fork me on github">
+        </span>
+    </a>
+</div>
 
+    <div class="example">
+        <div id="dragme" >
+            <h2>drag a card</h2>
+            <div id="cards">
+                <span *ngFor="let card of items" class="semen" >
+                    <img [src]="card.src" [dagDrag]="card">
+                </span>
+            </div>
+        </div>
+        <div id="dropme" (dagDrop)="printCard($event)" >
+            <h2>drop here</h2>
+            <ng-container *ngIf="selectedCard">
+                <span class="semen">
+                    <img [src]="selectedCard.src">
+                </span>
+            </ng-container>
+        </div>
     </div>
 </div>

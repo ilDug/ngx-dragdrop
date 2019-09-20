@@ -43,6 +43,9 @@ export class DagDragDirective<T> implements OnInit {
 
     public onDragStart(e) {
 
+        // e.preventDefault();
+        e.stopPropagation();
+
         /** set data-transfer */
         const payload = JSON.stringify(this.dagDrag)
         const data: DataTransfer = e.dataTransfer;
@@ -56,9 +59,7 @@ export class DagDragDirective<T> implements OnInit {
         // const img = new Image();
         // img.src = this.dragImage || null; 
         // img.style.height = element.offsetHeight/2 + 'px'
-
-
-        data.setDragImage(element, 0, 0)
+        // data.setDragImage(element, 0, 0)
 
         /** set dragging property on drag start */
         this.dragging = true;

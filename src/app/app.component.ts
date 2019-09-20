@@ -13,4 +13,11 @@ export class AppComponent {
         { name: "spade", src: "assets/spade.svg", color: "black" },
     ]
 
+    public selectedCard: any;
+
+
+    printCard(card: any) {
+        this.selectedCard = card;
+    }
+
 }
