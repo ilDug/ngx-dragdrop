@@ -32,7 +32,7 @@ export class DagDropDirective<T> implements OnInit {
 
 
     public onDrop(e) {
-        e.preventDefault();
+        event.preventDefault();
 
         this.dragOverClass = false;
 
@@ -47,8 +47,8 @@ export class DagDropDirective<T> implements OnInit {
 
 
     public onDragOver(e) {
-        e.stopPropagation();
-        e.preventDefault();
+        event.stopPropagation();
+        event.preventDefault();
 
         this.dragOverClass = true;
     }
@@ -58,8 +58,8 @@ export class DagDropDirective<T> implements OnInit {
 
 
     public onDragLeave(e) {
-        e.stopPropagation();
-        e.preventDefault();
+        event.stopPropagation();
+        event.preventDefault();
 
         this.dragOverClass = false;
     }
