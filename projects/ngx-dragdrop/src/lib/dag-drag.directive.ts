@@ -13,12 +13,12 @@ export class DagDragDirective<T> implements OnInit {
 
     /** whether element is dragging - TWO-WAY BINDING */
     private _dragging: boolean;
-    @Output()   draggingChange = new EventEmitter<boolean>();
-    @Input()    get dragging(): boolean { return this._dragging; }
-                set dragging(d: boolean) {
-                    this._dragging = d;
-                    this.draggingChange.emit(this._dragging);
-                };
+    @Output() draggingChange = new EventEmitter<boolean>();
+    @Input() get dragging(): boolean { return this._dragging; }
+    set dragging(d: boolean) {
+        this._dragging = d;
+        this.draggingChange.emit(this._dragging);
+    };
 
     /** data transfered during drag-drop */
     @Input() dagDrag: T;

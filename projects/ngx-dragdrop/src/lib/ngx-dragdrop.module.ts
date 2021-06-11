@@ -1,12 +1,19 @@
 import { NgModule } from '@angular/core';
-import { DagDragDirective } from './dag-drag.directive';
 import { DagDropDirective } from './dag-drop.directive';
+import { DagDragDirective } from './dag-drag.directive';
 
 
 
 @NgModule({
-    declarations: [DagDragDirective, DagDropDirective],
-    imports: [],
-    exports: [DagDragDirective, DagDropDirective]
+    declarations: [
+        DagDropDirective,
+        DagDragDirective
+    ],
+    imports: [
+    ],
+    exports: [
+        DagDropDirective,
+        DagDragDirective
+    ]
 })
 export class NgxDragdropModule { }

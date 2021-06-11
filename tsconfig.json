@@ -1,25 +1,37 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": false,
+    "noImplicitReturns": false,
+    "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
+    "paths": {
+        "ngx-dragdrop": [
+            "projects/ngx-dragdrop/src/public-api.ts",
+            "dist/ngx-dragdrop/ngx-dragdrop",
+            "dist/ngx-dragdrop"
+        ]
+    },
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2015",
+    "target": "es2017",
     "module": "es2020",
     "lib": [
       "es2018",
-      "dom"
-    ],
-    "paths": {
-      "ngx-dragdrop": [
-        "projects/ngx-dragdrop/src/public-api.ts",
-        "projects/ngx-dragdrop/src"
-      ]
-    }
-  }
+    "dom"
+    ]
+},
+"angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+}
 }
