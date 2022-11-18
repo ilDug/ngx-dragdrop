@@ -49,7 +49,11 @@ jobs:
           registry-url: https://registry.npmjs.org/
 
       - name: Publish
-        run: ls -laR && npm publish --access=public
+        run: |
+          pwd
+          ls -laR
+          cd ngx-dragdrop
+          npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
