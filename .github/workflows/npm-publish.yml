@@ -7,6 +7,8 @@ on:
   release:
     types: [created]
 
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,20 +30,18 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: library
-          path: dist
+          name: ngx-dragdrop
+          path: dist/
 
 
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-
       - name: Download built directory
         uses: actions/download-artifact@v3
         with:
-          name: library
+          name: ngx-dragdrop
 
       - uses: actions/setup-node@v3
         with:
@@ -60,12 +60,10 @@ jobs:
       contents: read
       packages: write
     steps:
-      - uses: actions/checkout@v3
-
       - name: Download built directory
         uses: actions/download-artifact@v3
         with:
-          name: library
+          name: ngx-dragdrop
 
       - uses: actions/setup-node@v3
         with:
