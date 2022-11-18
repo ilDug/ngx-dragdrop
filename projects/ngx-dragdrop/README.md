@@ -1,68 +1,24 @@
-# ngx-dragdrop
-Angular directives for passing data with Drag & Drop.
+# NgxDragdrop
 
-## Demo
-See [demo](http://ngx-dragdrop.dagtech.it)
+This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
 
+## Code scaffolding
 
-## Install
+Run `ng generate component component-name --project ngx-dragdrop` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-dragdrop`.
+> Note: Don't forget to add `--project ngx-dragdrop` or else it will be added to the default project in your `angular.json` file. 
 
-Install via package manager or fork this project ("projects/ngx-dragdrop/src")
+## Build
 
-NPM 
+Run `ng build ngx-dragdrop` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-```
-npm install @ildug/ngx-dragdrop
-```
-YARN 
+## Publishing
 
-```
-yarn add @ildug/ngx-dragdrop
-```
+After building your library with `ng build ngx-dragdrop`, go to the dist folder `cd dist/ngx-dragdrop` and run `npm publish`.
 
-## Usage in angular app
+## Running unit tests
 
-Import the module in your angular app. In your module **app.module.ts**
+Run `ng test ngx-dragdrop` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-``` typescript
-    ...
-    import { NgxDragdropModule } from '@ildug/ngx-dragdrop';
+## Further help
 
-    @NgModule({
-        declarations: [
-            AppComponent,
-        ],
-        imports: [
-            ...
-            NgxDragdropModule,
-            ...
-        ],
-        bootstrap: [AppComponent]
-    })
-    export class AppModule { }
-```
-
-### dagDrag
-
-Add the directive to an element to give it the *draggable* behaviour. Then assign a value to an element witch will be dragged.
-
-
-In **my.component.html**
-
-``` html
-<div [dagDrag]="item" > drag me </div>
-```
-
-### dagDrop
-Add the directive to an element to give it the *droppable* behaviour. Listen for the drop event and get dropped data
-
-``` html
-<div (dagDrop)="useItem($event)" > drop here </div>
-``` 
-
-When the draggable element enter in drop area,  **drop-over**  class is added to this element.
-
-## To Do
-
-- drag-start and drag-end events emitters
-- drag-enter and drag-leave events emitters
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
