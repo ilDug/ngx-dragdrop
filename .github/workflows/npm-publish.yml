@@ -30,8 +30,8 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: ngx-dragdrop
-          path: dist/
+          name: ngxDragdrop
+          path: dist
 
 
   publish-npm:
@@ -41,7 +41,7 @@ jobs:
       - name: Download built directory
         uses: actions/download-artifact@v3
         with:
-          name: ngx-dragdrop
+          name: ngxDragdrop
 
       - uses: actions/setup-node@v3
         with:
@@ -49,7 +49,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
 
       - name: Publish
-        run: npm publish --access=public
+        run: ls -la && npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
@@ -63,7 +63,7 @@ jobs:
       - name: Download built directory
         uses: actions/download-artifact@v3
         with:
-          name: ngx-dragdrop
+          name: ngxDragdrop
 
       - uses: actions/setup-node@v3
         with:
