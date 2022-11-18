@@ -1,4 +1,7 @@
 # ngx-dragdrop
+
+[![Node.js Package](https://github.com/ilDug/ngx-dragdrop/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/ilDug/ngx-dragdrop/actions/workflows/npm-publish.yml)
+
 Angular directives for passing data with Drag & Drop.
 
 ## Demo
