@@ -46,12 +46,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-          registry-url: https://registry.npmjs.org/
 
       - name: Publish
         run: |
-          pwd
-          ls -laR
           cd ngx-dragdrop
           npm publish --access=public
         env:
@@ -74,6 +71,9 @@ jobs:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
 
-      - run: npm publish
+      - name: Pusblish GPR
+        run: |
+          cd ngx-dragdrop
+          npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
