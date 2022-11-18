@@ -4,34 +4,31 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
-    "forceConsistentCasingInFileNames": true,
-    "strict": false,
-    "noImplicitReturns": false,
-    "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
-    "paths": {
-        "ngx-dragdrop": [
-            "projects/ngx-dragdrop/src/public-api.ts",
-            "dist/ngx-dragdrop/ngx-dragdrop",
-            "dist/ngx-dragdrop"
-        ]
-    },
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2017",
-    "module": "es2020",
+    "target": "ES2022",
+    "module": "ES2022",
+    "noImplicitReturns": false,
+    "useDefineForClassFields": false,
     "lib": [
-      "es2018",
-    "dom"
-    ]
-},
-"angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false,
-    "strictInjectionParameters": true,
-    "strictInputAccessModifiers": true,
-    "strictTemplates": true
-}
+      "ES2022",
+      "dom"
+    ],
+    "strict": false,
+    "paths": {
+      "ngx-dragdrop": [
+        "projects/ngx-dragdrop/src/public-api.ts",
+        "dist/ngx-dragdrop/ngx-dragdrop",
+        "dist/ngx-dragdrop",
+        "dist/ngx-dragdrop"
+      ]
+    }
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false
+  }
 }
