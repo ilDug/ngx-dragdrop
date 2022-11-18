@@ -12,6 +12,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:all": "ng build ngx-dragdrop",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
