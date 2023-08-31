@@ -5,7 +5,7 @@
 Angular directives for passing data with Drag & Drop.
 
 ## Demo
-See [demo](http://ngx-dragdrop.dagtech.it)
+See [demo](https://ildug.github.io/ngx-dragdrop/)
 
 
 ## Install
