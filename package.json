@@ -13,7 +13,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build:all": "ng build ngx-dragdrop",
-    "build:pages": "ng build demo",
+    "build:pages": "ng build demo --base-href https://ildug.github.io/ngx-dragdrop/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
