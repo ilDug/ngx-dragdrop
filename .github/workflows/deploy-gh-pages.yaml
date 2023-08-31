@@ -43,10 +43,10 @@ jobs:
           npm ci
 
       - name: Build Demo Page
+        # build the application: remmeber to set the base-href i packaje.json
+        # ng build demo --base-href https://<user>.github.io/<repo>/
         run: |
           npm run build:pages
-          pwd
-          ls -la
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
@@ -55,6 +55,7 @@ jobs:
         uses: actions/upload-pages-artifact@v2
         with:
           # Upload the build dist directory (DAG)
+          # set the dist destination folder (where angular puts the built files)
           path: "./dist/demo/"
 
       - name: Deploy to GitHub Pages
