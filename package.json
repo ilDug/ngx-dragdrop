@@ -1,6 +1,6 @@
 {
   "name": "@ildug/ngx-dragdrop",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "ilDug",
   "description": "Angular directives for passing data with Drag & Drop",
   "license": "MIT",
@@ -13,6 +13,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build:all": "ng build ngx-dragdrop",
+    "build:pages": "ng build demo --base-href /ngx-gragdrop/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
